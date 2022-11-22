@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import { useStoreState } from 'easy-peasy';
@@ -7,6 +6,7 @@ const Post = () => {
   const {id,name,username,email,address,phone,website,company} = router.query
   const todos = useStoreState((state) => state.todos);
   const singlePost = todos[0]?.text;
+  
   const {userId,id:postIdP,title,body} = singlePost;
 
   const comments = useStoreState((state)=>state.comment);
