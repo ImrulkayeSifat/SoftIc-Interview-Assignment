@@ -53,7 +53,7 @@ export default function Home({dataPost,dataComment,dataUsers,photoData}) {
   const removeElement = (id) =>{
     setStatePost((current)=> current.filter((p)=>p.id !==id))
   }
-  console.log(statePost);
+  
   return (
     <div>
       <Head>
