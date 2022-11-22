@@ -7,7 +7,7 @@ const Post = () => {
   const todos = useStoreState((state) => state.todos);
   const singlePost = todos[0]?.text;
   
-  const {userId,id:postIdP,title,body} = singlePost;
+  const {userId,id:postIdP,title,body} = singlePost ? singlePost : 0;
 
   const comments = useStoreState((state)=>state.comment);
   const comment = comments[0]?.text;
